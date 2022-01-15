@@ -18,3 +18,21 @@ class ProductSerializer(serializers.ModelSerializer):
       "get_image",
       "get_thumbnail"
     )
+
+class CategorySerializer(serializers.ModelSerializer):
+
+  ## To make sure that we get all the data
+  ## connected to the product as well
+  products = ProductSerializer(many=True)
+
+  class Meta:
+    model = Category
+
+    ## All of the things connected to the categories
+    fields = (
+      "id",
+      "name",
+      # "slug",
+      "get_absolute_url",
+      "products"
+    )
