@@ -139,7 +139,7 @@ STATIC_URL = 'static/'
 
 ## Add these comments below because they were like this in the tutorial
 # STATIC_URL = '/static/'
-# MEDIA_URL = '/media/'
+MEDIA_URL = '/media/'
 
 ## Add this for the 'uploads/' folder
 MEDIA_ROOT = BASE_DIR / 'media/'

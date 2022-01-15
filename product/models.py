@@ -32,7 +32,7 @@ class Category(models.Model):
 class Product(models.Model):
 
   ## A foreign key is an index in the database or a relation key
-  cateogory = models.ForeignKey(
+  category = models.ForeignKey(
     Category, 
     related_name='products',
 
