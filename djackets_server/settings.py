@@ -43,6 +43,9 @@ INSTALLED_APPS = [
     'rest_framework.authtoken',
     'corsheaders',
     'djoser'
+
+    ## Add a model
+    'product'
 ]
 
 ## Configure cors headers
