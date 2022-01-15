@@ -42,7 +42,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework.authtoken',
     'corsheaders',
-    'djoser'
+    'djoser',
 
     ## Add a model
     'product'
@@ -136,6 +136,13 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
 STATIC_URL = 'static/'
+
+## Add these comments below because they were like this in the tutorial
+# STATIC_URL = '/static/'
+# MEDIA_URL = '/media/'
+
+## Add this for the 'uploads/' folder
+MEDIA_ROOT = BASE_DIR / 'media/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field

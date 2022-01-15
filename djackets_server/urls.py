@@ -15,13 +15,19 @@ Including another URLconf
 """
 from django.contrib import admin
 
+## Import the possibility to use the settings
+from django.conf import settings
+from django.conf.urls.static import static
+
 ## Add 'include', which allows to include paths from that project
 from django.urls import path, include
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+  path('admin/', admin.site.urls),
 
-    ## Add new paths
-    path('api/v1', include('djoser.urls')),
-    path('api/v1', include('djoser.urls.authtoken'))
-]
+  ## Add new paths
+  path('api/v1', include('djoser.urls')),
+  path('api/v1', include('djoser.urls.authtoken'))
+
+  ## We add the following to use the MEDIA_URL
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
