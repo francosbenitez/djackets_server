@@ -26,8 +26,8 @@ urlpatterns = [
   path('admin/', admin.site.urls),
 
   ## Add new paths
-  path('api/v1', include('djoser.urls')),
-  path('api/v1', include('djoser.urls.authtoken')),
+  path('api/v1/', include('djoser.urls')),
+  path('api/v1/', include('djoser.urls.authtoken')),
   
   ## As said, the following path is imported like this to be more clean
   path('api/v1/', include('product.urls'))
