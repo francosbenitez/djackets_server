@@ -27,6 +27,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+## Stripe
+STRIPE_SECRET_KEY = 'pk_test_51KIixQHb298N4L0QNtIUoUxgn3aU33FC0c17jxHAm88p1rggDtHuhFp06OI2elg3Xg6sCGq0ZjdFqYyD21TzkNu900GOjFHNbC'
 
 # Application definition
 
@@ -45,7 +47,9 @@ INSTALLED_APPS = [
     'djoser',
 
     ## Add a model
-    'product'
+    'product',
+
+    'order'
 ]
 
 ## Configure cors headers

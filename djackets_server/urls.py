@@ -30,7 +30,9 @@ urlpatterns = [
   path('api/v1/', include('djoser.urls.authtoken')),
   
   ## As said, the following path is imported like this to be more clean
-  path('api/v1/', include('product.urls'))
+  path('api/v1/', include('product.urls')),
+
+  path('api/v1/', include('order.urls'))
 
   ## We add the following to use the MEDIA_URL
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
